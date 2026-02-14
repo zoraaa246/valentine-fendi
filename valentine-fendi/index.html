@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buat Ayang Fendi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Musik Background -->
+  <audio id="bgMusic" loop>
+    <source src="Until-I-Found-You.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <!-- Opening Screen -->
+  <div class="opening" id="opening">
+    <h1>Aloww Ayanggg</h1>
+    <p>Aku bikin sesuatu yang sederhana, tapi serius aku buat khusus buat kamu.</p>
+    <button onclick="enterWebsite()">Masuk</button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container hidden" id="mainContent">
+
+    <header class="hero">
+      <h1>Happy Valentine, Fendi ❤️</h1>
+      <p>Ini bukan hadiah mahal, tapi aku harap ini bisa bikin kamu senyum.</p>
+      <span class="hint">scroll pelan ya</span>
+    </header>
+
+    <!-- Story Section -->
+    <section class="section fade-in">
+      <h2>📖 Sedikit Tentang Kita</h2>
+      <p>
+        Aku masih inget gimana semuanya mulai. Dari ngobrol biasa, sampai akhirnya jadi kebiasaan.
+        Dari yang awalnya cuma sekadar kenal, sekarang kamu jadi salah satu bagian penting di hidup aku.
+      </p>
+      <p>
+        Hubungan kita nggak selalu mulus, tapi aku bersyukur karena sampai sekarang kita masih jalan bareng.
+      </p>
+    </section>
+
+    <!-- Moments Section -->
+    <section class="section fade-in">
+      <h2>🌸 Hal Kecil yang Aku Ingat</h2>
+      <ul class="memory-list">
+        <li>cara kamu ngobrol santai tapi bikin aku nyaman</li>
+        <li>hal random yang kamu lakuin tanpa sadar tapi lucu</li>
+        <li>momen sederhana yang justru paling aku kangenin</li>
+        <li>waktu kamu perhatian, meskipun kamu kadang gengsi</li>
+      </ul>
+    </section>
+
+    <!-- Things I Like -->
+    <section class="section fade-in">
+      <h2>💗 Hal yang Aku Suka dari Kamu</h2>
+      <p>
+        Aku suka cara kamu jadi diri sendiri.
+        Aku suka senyuman kamu, jadi tolong senyum terus buat aku ya
+      </p>
+      <p>
+        Dan yang paling aku suka, kamu selalu punya cara sendiri buat bikin aku ngerasa tenang.
+      </p>
+    </section>
+
+    <!-- Funny Section -->
+    <section class="section fade-in">
+      <h2>😂 Sedikit Lucu-lucuan</h2>
+      <p>
+        Kadang kamu sok cuek, tapi keliatan banget kalau sebenarnya peduli.
+        Itu yang bikin aku gemes.
+      </p>
+      <p class="quote">
+        "Ayangg, jangan terlalu ganteng ya. Bikin aku repot mikir cewek mana yang kepicut kamu HAHAHA."
+      </p>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="section fade-in">
+      <h2>📌 Catalog Kenangan</h2>
+      <p>Beberapa hal kecil yang selalu aku inget tentang kamu.</p>
+
+      <div class="catalog">
+        <div class="card" onclick="openCatalog('📍 Momen Random', 'Hal-hal kecil yang tiba-tiba kejadian, tapi malah jadi yang paling aku inget.')">
+          <h3>📍 Momen Random</h3>
+          <p>Kadang hal kecil justru paling nempel di kepala aku.</p>
+          <span>klik aku</span>
+        </div>
+
+        <div class="card" onclick="openCatalog('🍜 Makanan Favorit', 'Aku masih inget beberapa makanan yang kamu suka, dan itu lucu karena aku jadi ikut hafal.')">
+          <h3>🍜 Makanan Favorit</h3>
+          <p>Aku lebih suka kamu nyobain masakan aku.</p>
+          <span>klik aku</span>
+        </div>
+
+        <div class="card" onclick="openCatalog('🎶 Lagu Kita', 'Until I Found You ini salah satu lagu yang menurut aku cocok banget buat kita.')">
+          <h3>🎶 Lagu Kita</h3>
+          <p>Kalau denger ini, aku keinget kamu.</p>
+          <span>klik aku</span>
+        </div>
+
+        <div class="card" onclick="openCatalog('💬 Kebiasaan Kamu', 'Kebiasaan kecil kamu yang kadang bikin aku ketawa sendiri pas inget.')">
+          <h3>💬 Kebiasaan Kamu</h3>
+          <p>Suka begadang sampe subuh huuuu.</p>
+          <span>klik aku</span>
+        </div>
+
+        <div class="card" onclick="openCatalog('🤍 Hal yang Aku Syukuri', 'Aku bersyukur banget kamu ada di hidup aku sampai sekarang.')">
+          <h3>🤍 Hal yang Aku Syukuri</h3>
+          <p>Aku beneran bersyukur.</p>
+          <span>klik aku</span>
+        </div>
+
+        <div class="card" onclick="openCatalog('🌙 Harapan ke Depan', 'Semoga kita tetap bareng, saling jaga, dan nggak gampang nyerah satu sama lain.')">
+          <h3>🌙 Harapan ke Depan</h3>
+          <p>Pelan-pelan aja, yang penting bareng.</p>
+          <span>klik aku</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secret Button -->
+    <section class="section fade-in">
+      <h2>🔒 Ada Satu Bagian Lagi</h2>
+      <p>Klik tombol ini kalau kamu masih betah baca sampai sini.</p>
+      <button class="secret-btn" onclick="openSurprise()">Buka</button>
+    </section>
+
+    <!-- Surprise Section -->
+    <section class="section hidden surprise" id="surprise">
+      <h2>🎁 Buat Kamu</h2>
+      <p>
+        Makasih ya, Ayanggg.
+        Makasih udah jadi orang yang selalu ada dalam banyak hal, bahkan di saat aku lagi capek atau mood berantakan.
+      </p>
+      <p>
+        Aku nggak tau hubungan kita bakal gimana ke depannya,
+        tapi aku harap kita bisa terus saling jaga, saling ngerti, dan tetap bareng.
+      </p>
+      <p class="big-love">
+        Aku sayang kamu, Ayanggg.
+      </p>
+      <p class="closing">
+        Happy Valentine ❤️
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>Dibuat khusus untuk Ayang Fendi.</p>
+      <p>Lopyu Ayang Muahhhh.</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
